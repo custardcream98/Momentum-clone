@@ -1,22 +1,12 @@
-const calculator = {
-    plus: function (a, b) {
-        console.log(a + b);
-    },
-    minus: function (a, b) {
-        console.log(a - b);
-    },
-    devide: function (a, b) {
-        console.log(a / b);
-    },
-    power: function (a, b) {
-        console.log(a ** b);
-    }
-};
+// const loginForm = document.getElementById("login-form");
+// const loginInput = loginForm.querySelector("input");
+// const loginButton = loginForm.querySelector("button"); 이렇게 해도 되고 혹은
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button"); // 이렇게 해도 됨
 
-calculator.plus(1, 5);
-calculator.minus(3, 5);
-calculator.power(2, 3);
-calculator.devide(10, 5);
+function onLoginBtnClick() {
+    const username = loginInput.value;
+    console.log(username);
+}
 
-const input = prompt('이름은?');
-console.log(input);
+loginButton.addEventListener("click", onLoginBtnClick);
